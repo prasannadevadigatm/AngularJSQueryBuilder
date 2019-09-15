@@ -1,0 +1,23 @@
+{
+  "name": "query-builder",
+  "authors": [
+    "prasannadevadiga <prasanna.d@zinnov.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.6.8",
+    "jquery": "^3.3.1",
+    "bootstrap": "3.3.7",
+    "angular-sanitize": "1.6.8"
+  }
+}

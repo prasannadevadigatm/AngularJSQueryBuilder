@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Angular JS Custom Directives</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet"  href="custom.css"></style>
+</head>
+
+<body>
+    <h2 class="text-center">AngularJS Sample Application</h2>
+    <div class="container" ng-app="mainApp" ng-controller="QueryBuilderController">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="triangle-up left"></div>
+                <div class="panel panel-success mb0">
+                    <div class="panel-body">
+                        <div class="alert alert-info">
+                            <strong>Generated Query</strong>
+                            <br>
+                            <span ng-bind-html="output"></span>
+                        </div>
+                        <query-builder group="filter.group" operators="operators" fields="queryfields" conditions="conditions" hide-group="false"></query-builder>
+                        <button type="button" class="btn btn-success ml0 btn-sm btnRound" ng-click="buildQueryString()">Apply</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="panel panel-success mb0">
+                    <div class="panel-body">
+                        {{filterData | json}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
